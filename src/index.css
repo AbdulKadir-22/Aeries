@@ -55,22 +55,26 @@
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
   }
-  
+
   @keyframes petalFall {
     0% {
       transform: translateY(-5vh) translateX(0) rotate(0deg);
       opacity: 0;
     }
+
     10% {
       opacity: var(--petal-opacity, 0.7);
     }
+
     50% {
       transform: translateY(50vh) translateX(var(--drift-x, 20px)) rotate(180deg);
       opacity: var(--petal-opacity, 0.7);
     }
+
     90% {
       opacity: var(--petal-opacity, 0.7);
     }
+
     100% {
       transform: translateY(110vh) translateX(calc(var(--drift-x, 20px) * -1)) rotate(360deg);
       opacity: 0;
@@ -92,22 +96,28 @@
     pointer-events: none;
     transition: filter 0.5s ease, opacity 0.5s ease;
   }
-  
+
   .corner-flower.left {
     left: -20px;
     transform: scaleX(-1);
   }
-  
+
   .corner-flower.right {
     right: -20px;
   }
-  
+
+  .corner-flower.mobile-tulip {
+    width: 75%;
+    max-width: none;
+    opacity: 0.6;
+  }
+
   /* In light mode: use multiply so the white background of the image disappears into the pink backdrop */
   :root:not(.dark) .corner-flower {
     mix-blend-mode: multiply;
     opacity: 0.85;
   }
-  
+
   /* In dark mode: invert the image and hue-rotate back towards pink/purple, and use screen blend mode to hide black */
   .dark .corner-flower {
     filter: invert(1) hue-rotate(160deg) brightness(1.3) contrast(1.2);

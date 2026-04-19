@@ -1,0 +1,20 @@
+{
+  "hero": {
+    "name": "Alfisha Ansari",
+    "subtitle": "Crafting the designs from the bottom of my heart, while blooming myself through discipline and wisdom"
+  },
+  "navLinks": [
+    { "label": "Home", "href": "/" },
+    { "label": "Projects", "href": "/projects" },
+    { "label": "Paintings", "href": "/paintings" },
+    { "label": "Skills", "href": "/skills" },
+    { "label": "Shelf", "href": "/shelf" },
+    { "label": "Contact", "href": "/contact" }
+  ],
+  "socialLinks": [
+    { "platform": "GitHub", "icon": "FaGithub", "url": "https://github.com/alfisha-28" },
+    { "platform": "LinkedIn", "icon": "FaLinkedin", "url": "#" },
+    { "platform": "Instagram", "icon": "FaInstagram", "url": "#" },
+    { "platform": "Code", "icon": "FaCode", "url": "#" }
+  ]
+}

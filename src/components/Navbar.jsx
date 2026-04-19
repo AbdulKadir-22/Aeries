@@ -1,124 +1,83 @@
-import React from "react";
+import React, { useState } from 'react';
+import { Sun, Moon, Menu, X, Search } from 'lucide-react';
+import content from '../data/content.json';
 
-export default function Navbar({ dark, setDark }) {
-  const links = ["Home", "About Me", "Paintings", "Skills", "Projects", "Contact"];
+const Navbar = ({ darkMode, setDarkMode }) => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav style={{
-      position: "fixed",
-      top: "18px",
-      left: "50%",
-      transform: "translateX(-50%)",
-      zIndex: 100,
-      width: "min(900px, 94vw)",
-      background: dark
-        ? "rgba(60, 10, 90, 0.45)"
-        : "rgba(255, 230, 245, 0.55)",
-      backdropFilter: "blur(18px) saturate(160%)",
-      WebkitBackdropFilter: "blur(18px) saturate(160%)",
-      border: dark
-        ? "1.5px solid rgba(180,100,230,0.25)"
-        : "1.5px solid rgba(240,150,200,0.4)",
-      borderRadius: "999px",
-      padding: "0 28px",
-      height: "58px",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "space-between",
-      boxShadow: dark
-        ? "0 8px 40px rgba(120,0,180,0.22), 0 1.5px 0 rgba(200,100,255,0.08) inset"
-        : "0 8px 40px rgba(236,72,153,0.13), 0 1.5px 0 rgba(255,255,255,0.5) inset",
-      transition: "background 0.4s, box-shadow 0.4s, border 0.4s",
-    }}>
-      {/* Logo */}
-      <div style={{
-        fontFamily: "'Playfair Display', Georgia, serif",
-        fontWeight: 800,
-        fontSize: "1.25rem",
-        letterSpacing: "-0.02em",
-        background: dark
-          ? "linear-gradient(135deg, #e0aaff, #b56ed4)"
-          : "linear-gradient(135deg, #db2777, #f472b6)",
-        WebkitBackgroundClip: "text",
-        WebkitTextFillColor: "transparent",
-        backgroundClip: "text",
-        whiteSpace: "nowrap",
-        cursor: "pointer",
-        userSelect: "none",
-      }}>✦ Ariont</div>
+    <>
+      <nav className="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] max-w-4xl z-50 glassmorphism rounded-full px-6 py-3 flex items-center justify-between">
+        <div className="font-serif italic font-bold text-2xl tracking-wide w-12 h-12 rounded-full border-2 border-current flex items-center justify-center opacity-80">
+          AA
+        </div>
+        
+        {/* Desktop Links */}
+        <div className="hidden md:flex items-center gap-8 text-sm font-medium opacity-90 tracking-wide">
+          {content.navLinks.map((link, idx) => (
+            <a key={idx} href={link.href} className="hover:text-brand-accent transition-colors">
+              {link.label}
+            </a>
+          ))}
+        </div>
 
-      {/* Links */}
-      <ul style={{
-        display: "flex",
-        gap: "4px",
-        listStyle: "none",
-        margin: 0,
-        padding: 0,
-        alignItems: "center",
-      }}>
-        {links.map((l) => (
-          <li key={l}>
-            <a href="#" style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: "0.82rem",
-              fontWeight: 500,
-              letterSpacing: "0.01em",
-              color: dark ? "#e0aaff" : "#9d174d",
-              textDecoration: "none",
-              padding: "6px 12px",
-              borderRadius: "999px",
-              display: "block",
-              transition: "background 0.2s, color 0.2s",
-              whiteSpace: "nowrap",
-            }}
-              onMouseEnter={e => {
-                e.target.style.background = dark ? "rgba(180,100,230,0.2)" : "rgba(236,72,153,0.1)";
-                e.target.style.color = dark ? "#f0d4ff" : "#be185d";
-              }}
-              onMouseLeave={e => {
-                e.target.style.background = "transparent";
-                e.target.style.color = dark ? "#e0aaff" : "#9d174d";
-              }}
-            >{l}</a>
-          </li>
-        ))}
-      </ul>
+        <div className="flex items-center gap-4">
+          <button 
+            onClick={() => setDarkMode(!darkMode)}
+            className="flex items-center p-1 w-16 h-8 rounded-full glassmorphism relative overflow-hidden cursor-pointer hover:border-brand-accent transition-colors hidden md:flex"
+            aria-label="Toggle Dark Mode"
+          >
+            <div className="flex justify-between items-center w-full px-1 text-current opacity-60">
+              <Sun size={14} />
+              <Moon size={14} />
+            </div>
+            <div className={`absolute left-1 top-1 w-6 h-6 rounded-full bg-current transition-transform duration-300 ease-in-out flex items-center justify-center ${darkMode ? 'translate-x-8' : 'translate-x-0'}`}>
+            </div>
+          </button>
+          
+          {/* Mobile Menu Buttons */}
+          <div className="md:hidden flex items-center gap-4">
+            <button
+              onClick={() => setDarkMode(!darkMode)}
+              className="p-2 opacity-80 hover:text-brand-accent"
+              aria-label="Toggle Dark Mode"
+            >
+              {darkMode ? <Moon size={20} /> : <Sun size={20} />}
+            </button>
+            <button 
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="p-2 opacity-80 hover:text-brand-accent"
+              aria-label="Toggle Mobile Menu"
+            >
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
+        </div>
+      </nav>
 
-      {/* Dark/Light toggle */}
-      <button
-        onClick={() => setDark(!dark)}
-        aria-label="Toggle dark mode"
-        style={{
-          background: dark
-            ? "linear-gradient(135deg, #7e22ce, #b56ed4)"
-            : "linear-gradient(135deg, #f472b6, #db2777)",
-          border: "none",
-          borderRadius: "999px",
-          width: "42px",
-          height: "24px",
-          cursor: "pointer",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: dark ? "flex-end" : "flex-start",
-          padding: "3px",
-          transition: "background 0.4s",
-          flexShrink: 0,
-          boxShadow: "0 2px 8px rgba(0,0,0,0.15)",
-        }}
-      >
-        <span style={{
-          width: "18px",
-          height: "18px",
-          borderRadius: "50%",
-          background: "#fff",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          fontSize: "10px",
-          transition: "all 0.3s cubic-bezier(.4,0,.2,1)",
-          boxShadow: "0 1px 4px rgba(0,0,0,0.2)",
-        }}>{dark ? "🌙" : "☀️"}</span>
-      </button>
-    </nav>
+      {/* Mobile Menu Dropdown */}
+      {mobileMenuOpen && (
+        <div className="md:hidden fixed top-24 right-4 w-64 glassmorphism shadow-2xl rounded-3xl p-6 z-40 transition-colors duration-300">
+          <div className="flex justify-between items-center mb-6">
+            <span className="text-xs uppercase tracking-widest opacity-50 font-semibold">Menu</span>
+            <Search size={16} className="opacity-50" />
+          </div>
+          <div className="flex flex-col gap-6">
+            {content.navLinks.map((link, idx) => (
+              <a 
+                key={idx} 
+                href={link.href} 
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-lg opacity-80 hover:opacity-100 hover:text-brand-accent transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+    </>
   );
-}
+};
+
+export default Navbar;
