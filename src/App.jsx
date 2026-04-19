@@ -15,10 +15,13 @@ function App() {
   }, []);
 
   useEffect(() => {
+    const favicon = document.getElementById('favicon');
     if (darkMode) {
       document.documentElement.classList.add('dark');
+      if (favicon) favicon.href = '/AA_dark.png';
     } else {
       document.documentElement.classList.remove('dark');
+      if (favicon) favicon.href = '/AA_light.png';
     }
   }, [darkMode]);
 

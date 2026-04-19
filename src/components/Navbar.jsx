@@ -8,8 +8,8 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   return (
     <>
       <nav className="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] max-w-4xl z-50 glassmorphism rounded-full px-6 py-3 flex items-center justify-between">
-        <div className="font-serif italic font-bold text-2xl tracking-wide w-12 h-12 rounded-full border-2 border-current flex items-center justify-center opacity-80">
-          AA
+        <div className="w-12 h-12 flex items-center justify-center opacity-90 transition-opacity hover:opacity-100">
+          <img src={darkMode ? "/AA_dark.png" : "/AA_light.png"} alt="Logo" className="w-full h-full object-contain drop-shadow-sm rounded-full " />
         </div>
         
         {/* Desktop Links */}
