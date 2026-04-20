@@ -76,11 +76,21 @@ const MovieModal = ({ movie, onClose }) => {
 
       <button 
         onClick={handleClose}
-        className="absolute top-6 right-6 p-4 rounded-full hover:scale-110 transition-transform text-white/40 hover:text-white bg-black/40 backdrop-blur-md border border-white/10 shadow-2xl z-[150]"
+        className="absolute top-4 right-4 md:top-6 md:right-6 p-3 md:p-4 rounded-full hover:scale-110 transition-transform text-white/40 hover:text-white bg-black/40 backdrop-blur-md border border-white/10 shadow-2xl z-[150]"
         aria-label="Close theater"
       >
-        <X size={28} />
+        <X size={24} className="md:w-7 md:h-7" />
       </button>
+
+      {/* Mobile Sticky Close Bar */}
+      <div className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-[200]">
+        <button 
+          onClick={(e) => { e.stopPropagation(); handleClose(); }}
+          className="flex items-center gap-2 bg-red-600/90 backdrop-blur-md border border-red-500/50 text-white px-6 py-3 rounded-full shadow-[0_10px_30px_rgba(220,38,38,0.3)] pointer-events-auto font-bold uppercase tracking-widest text-xs"
+        >
+          Close Movie
+        </button>
+      </div>
     </div>
   );
 };

@@ -36,11 +36,11 @@ const BookModal = ({ book, onClose, onNext, onPrev }) => {
       {/* Book Container */}
       <div 
         onClick={(e) => e.stopPropagation()} // FIX: Prevent clicks inside from closing the book
-        className={`relative w-full max-w-5xl aspect-[3/4] md:aspect-[7/5] bg-[#4a3551] rounded-xl shadow-[0_30px_60px_rgba(74,53,81,0.3),inset_0_2px_4px_rgba(255,255,255,0.2)] p-2 md:p-3 transition-transform duration-700 ease-out flex flex-col z-10 ${isOpen ? 'scale-100 translate-y-0' : 'scale-95 translate-y-8'}`}
+        className={`relative w-full max-w-5xl h-[85vh] md:h-auto md:aspect-[7/5] bg-[#4a3551] rounded-xl shadow-[0_30px_60px_rgba(74,53,81,0.3),inset_0_2px_4px_rgba(255,255,255,0.2)] p-2 md:p-3 transition-transform duration-700 ease-out flex flex-col z-10 ${isOpen ? 'scale-100 translate-y-0' : 'scale-[0.98] translate-y-8'}`}
       >
         
         {/* Pages Wrapper */}
-        <div className="flex-1 w-full h-full flex flex-col md:flex-row rounded-lg overflow-hidden relative shadow-[inset_0_0_20px_rgba(0,0,0,0.1)]">
+        <div className="flex-1 w-full h-full flex flex-col md:flex-row rounded-lg overflow-y-auto md:overflow-hidden relative shadow-[inset_0_0_20px_rgba(0,0,0,0.1)] custom-scrollbar pb-10 md:pb-0" style={{ WebkitOverflowScrolling: 'touch' }}>
           {/* Middle Spine Shadow Overlay */}
           <div className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-12 bg-gradient-to-r from-transparent via-black/20 to-transparent pointer-events-none z-30 hidden md:block"></div>
           
@@ -50,7 +50,7 @@ const BookModal = ({ book, onClose, onNext, onPrev }) => {
           </div>
 
           {/* Left Page */}
-          <div className="w-full md:w-1/2 h-full bg-[#fcfaf5] p-6 md:p-10 flex flex-col overflow-y-auto no-scrollbar relative z-20">
+          <div className="w-full md:w-1/2 h-auto md:h-full shrink-0 bg-[#fcfaf5] p-6 md:p-10 flex flex-col overflow-visible md:overflow-y-auto no-scrollbar relative z-20">
             {/* Page texture line */}
             <div className="absolute inset-0 pointer-events-none opacity-[0.03]" style={{ backgroundImage: 'repeating-linear-gradient(to bottom, transparent, transparent 24px, #000 24px, #000 25px)' }}></div>
             
@@ -117,7 +117,7 @@ const BookModal = ({ book, onClose, onNext, onPrev }) => {
           </div>
 
           {/* Right Page */}
-          <div className="w-full md:w-1/2 h-full bg-[#fcfaf5] p-6 md:p-10 flex flex-col overflow-y-auto no-scrollbar relative shadow-[-5px_0_15px_rgba(0,0,0,0.03)] z-10">
+          <div className="w-full md:w-1/2 h-auto md:h-full shrink-0 bg-[#fcfaf5] p-6 md:p-10 flex flex-col overflow-visible md:overflow-y-auto no-scrollbar relative shadow-[-5px_0_15px_rgba(0,0,0,0.03)] z-10">
             {/* Page texture line */}
             <div className="absolute inset-0 pointer-events-none opacity-[0.03]" style={{ backgroundImage: 'repeating-linear-gradient(to bottom, transparent, transparent 24px, #000 24px, #000 25px)' }}></div>
             
@@ -133,7 +133,7 @@ const BookModal = ({ book, onClose, onNext, onPrev }) => {
             </p>
 
             {/* Takeaway Block */}
-            <div className="bg-[#fcf5f7] p-5 rounded-xl border border-[#f0e3e7] relative mt-auto">
+            <div className="bg-[#fcf5f7] p-5 rounded-xl border border-[#f0e3e7] relative mt-auto mb-20 md:mb-0">
               <h4 className="font-bold text-[#3e2c45] mb-2 font-serif flex items-center gap-2">
                 My Takeaway 🌿
               </h4>
@@ -164,10 +164,17 @@ const BookModal = ({ book, onClose, onNext, onPrev }) => {
           </div>
         </button>
 
-        {/* Center Icon */}
-        <div className="w-12 h-12 rounded-full bg-brand-accent text-white flex items-center justify-center shadow-[0_0_20px_rgba(255,182,193,0.5)] pointer-events-auto">
+        {/* Center Icon (Desktop) / Mobile Close Button */}
+        <div className="hidden md:flex w-12 h-12 rounded-full bg-brand-accent text-white items-center justify-center shadow-[0_0_20px_rgba(255,182,193,0.5)] pointer-events-auto">
           <BookOpen strokeWidth={1.5} />
         </div>
+        
+        <button 
+          onClick={(e) => { e.stopPropagation(); handleClose(); }}
+          className="md:hidden flex items-center gap-2 bg-[#c95a70] text-white px-6 py-3 rounded-full shadow-2xl pointer-events-auto font-bold uppercase tracking-widest text-xs"
+        >
+          Close
+        </button>
 
         {/* Next Button */}
         <button 
