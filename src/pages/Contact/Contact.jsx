@@ -1,4 +1,6 @@
 import React from 'react';
+import { Send, Mail, MapPin } from 'lucide-react';
+import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 const Contact = () => {
   return (
@@ -22,9 +24,31 @@ const Contact = () => {
             Let's Connect
           </h2>
           
-          <p className="text-base mb-6 opacity-80 italic font-medium leading-relaxed">
+          <p className="text-base mb-8 opacity-80 italic font-medium leading-relaxed">
             Whether you have a project in mind, want to collaborate on a masterpiece, or simply wish to say hello, my inbox is always open.
           </p>
+
+          {/* Social & Contact Quick Links */}
+          <div className="flex flex-wrap gap-4 mb-10">
+            <div className="flex gap-3">
+              <a href="https://github.com" target="_blank" rel="noreferrer" className="w-11 h-11 rounded-2xl glassmorphism flex items-center justify-center text-brand-text/60 hover:text-brand-accent hover:scale-110 transition-all duration-300 shadow-sm">
+                <FaGithub size={20} />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="w-11 h-11 rounded-2xl glassmorphism flex items-center justify-center text-brand-text/60 hover:text-brand-accent hover:scale-110 transition-all duration-300 shadow-sm">
+                <FaLinkedin size={20} />
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="w-11 h-11 rounded-2xl glassmorphism flex items-center justify-center text-brand-text/60 hover:text-brand-accent hover:scale-110 transition-all duration-300 shadow-sm">
+                <FaInstagram size={20} />
+              </a>
+            </div>
+            <div className="h-11 w-px bg-brand-text/10 mx-2 hidden sm:block"></div>
+            <div className="flex flex-col justify-center">
+              <div className="flex items-center gap-2 text-xs font-bold text-brand-text/50 uppercase tracking-widest mb-1">
+                <Mail size={12} className="text-brand-accent" /> Email
+              </div>
+              <a href="mailto:hello@aeris.com" className="text-sm font-bold text-brand-text/80 hover:text-brand-accent transition-colors">hello@aeris.com</a>
+            </div>
+          </div>
 
           <div className="mb-6">
             <h3 className="text-lg font-bold mb-3 opacity-90">Why you should contact me:</h3>

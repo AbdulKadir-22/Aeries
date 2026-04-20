@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import BookModal from './BookModal';
-import MovieModal from './MovieModal';
-import shelfData from '../data/shelf.json';
+import BookModal from '../../components/modals/BookModal';
+import MovieModal from '../../components/modals/MovieModal';
+import shelfData from '../../data/shelf.json';
 import { BookOpen, Film, Play, Star, Search } from 'lucide-react';
 
 const chunkArray = (array, size) => {

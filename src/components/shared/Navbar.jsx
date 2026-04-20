@@ -1,32 +1,29 @@
 import React, { useState } from 'react';
 import { Sun, Moon, Menu, X, Search } from 'lucide-react';
-import content from '../data/content.json';
+import { Link, useLocation } from 'react-router-dom';
+import content from '../../data/content.json';
 
 const Navbar = ({ darkMode, setDarkMode }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   return (
     <>
       <nav className="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] max-w-4xl z-50 glassmorphism rounded-full px-6 py-3 flex items-center justify-between">
-        <div className="w-12 h-12 flex items-center justify-center opacity-90 transition-opacity hover:opacity-100">
+        <Link to="/" className="w-12 h-12 flex items-center justify-center opacity-90 transition-opacity hover:opacity-100">
           <img src={darkMode ? "/AA_dark.png" : "/AA_light.png"} alt="Logo" className="w-full h-full object-contain drop-shadow-sm rounded-full " />
-        </div>
+        </Link>
         
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8 text-sm font-medium opacity-90 tracking-wide">
           {content.navLinks.map((link, idx) => (
-            <a 
+            <Link 
               key={idx} 
-              href={link.href}
-              onClick={(e) => {
-                e.preventDefault();
-                window.history.pushState({}, '', link.href);
-                window.dispatchEvent(new Event('popstate'));
-              }}
-              className="hover:text-brand-accent transition-colors cursor-pointer"
+              to={link.href}
+              className={`hover:text-brand-accent transition-colors cursor-pointer ${location.pathname === link.href ? 'text-brand-accent' : ''}`}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -73,19 +70,14 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           </div>
           <div className="flex flex-col gap-6">
             {content.navLinks.map((link, idx) => (
-              <a 
+              <Link 
                 key={idx} 
-                href={link.href} 
-                onClick={(e) => {
-                  e.preventDefault();
-                  window.history.pushState({}, '', link.href);
-                  window.dispatchEvent(new Event('popstate'));
-                  setMobileMenuOpen(false);
-                }}
-                className="text-lg opacity-80 hover:opacity-100 hover:text-brand-accent transition-colors cursor-pointer"
+                to={link.href} 
+                onClick={() => setMobileMenuOpen(false)}
+                className={`text-lg opacity-80 hover:opacity-100 hover:text-brand-accent transition-colors cursor-pointer ${location.pathname === link.href ? 'text-brand-accent' : ''}`}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
