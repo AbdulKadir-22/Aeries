@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Contact from './components/Contact';
 import Shelf from './components/Shelf';
+import Paintings from './components/Paintings';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -51,6 +52,7 @@ function App() {
       {/* Render Pages based on path */}
       {currentPath === '/contact' && <Contact />}
       {currentPath === '/shelf' && <Shelf />}
+      {currentPath === '/paintings' && <Paintings />}
       {(currentPath === '/' || currentPath === '') && <Hero />}
     </div>
   );
