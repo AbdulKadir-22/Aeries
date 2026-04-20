@@ -1,0 +1,133 @@
+[
+  {
+    "id": "staynest",
+    "title": "StayNest",
+    "slug": "staynest",
+    "featured": true,
+    "category": "Full Stack",
+    "shortDescription": "Full-stack rental platform for finding and booking cozy stays around and abroad.",
+    "longDescription": "StayNest is a full-stack web application that allows users to discover, explore and book unique stays. It features secure authentication, real-time availability, and a seamless booking experience.",
+    "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    "tags": ["React", "Node.js", "MongoDB", "Tailwind CSS", "Stripe"],
+    "links": {
+      "live": "https://staynest.demo",
+      "code": "https://github.com/example/staynest"
+    },
+    "stats": {
+      "duration": "Jan 2024 - Apr 2024",
+      "role": "Full Stack Developer",
+      "type": "Web Application",
+      "team": "Solo Project"
+    },
+    "overview": "StayNest was built to simplify the process of finding and booking comfortable and unique stays. The platform focuses on user experience, speed, and reliability.",
+    "overviewPoints": [
+      "Browse and filter stays by location, price, and category",
+      "Secure user authentication and profile management",
+      "Real-time availability and booking system",
+      "Integrated payments using Stripe",
+      "Responsive design for all devices"
+    ],
+    "process": [
+      {
+        "step": 1,
+        "title": "Research",
+        "description": "Studied user needs and analyzed existing platforms.",
+        "icon": "Search"
+      },
+      {
+        "step": 2,
+        "title": "Design",
+        "description": "Created wireframes and UI designs in Figma.",
+        "icon": "Palette"
+      },
+      {
+        "step": 3,
+        "title": "Development",
+        "description": "Built the full-stack application using MERN stack.",
+        "icon": "Code"
+      },
+      {
+        "step": 4,
+        "title": "Testing",
+        "description": "Tested for responsiveness, bugs and performance.",
+        "icon": "Activity"
+      },
+      {
+        "step": 5,
+        "title": "Deployment",
+        "description": "Deployed on Vercel and MongoDB Atlas.",
+        "icon": "UploadCloud"
+      }
+    ],
+    "challenges": [
+      "Implementing real-time availability with proper performance.",
+      "Handling secure payments and edge cases with Stripe.",
+      "Ensuring a smooth and responsive experience across devices."
+    ],
+    "outcomes": [
+      "Delivered a complete booking platform with great user feedback.",
+      "Improved my skills in full-stack development and system design.",
+      "Built with scalability and future features in mind."
+    ],
+    "results": [
+      { "label": "Positive Feedback", "value": "+95%", "icon": "Smile" },
+      { "label": "Faster Bookings", "value": "+40%", "icon": "Zap" },
+      { "label": "User Engagement", "value": "+30%", "icon": "Users" }
+    ],
+    "quote": "Every challenge was an opportunity to learn something new."
+  },
+  {
+    "id": "taskly",
+    "title": "Taskly",
+    "category": "Frontend",
+    "shortDescription": "A smart productivity dashboard to organize tasks, track progress and boost productivity.",
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "tags": ["React", "Redux", "Tailwind CSS"],
+    "icon": "BarChart3"
+  },
+  {
+    "id": "greenshop",
+    "title": "GreenShop",
+    "category": "Full Stack",
+    "shortDescription": "An e-commerce website for plant lovers with product listings and secure payments.",
+    "image": "https://images.unsplash.com/photo-1585503418537-88331351ad99?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "tags": ["Next.js", "MongoDB", "Stripe"],
+    "icon": "Leaf"
+  },
+  {
+    "id": "melody",
+    "title": "Melody",
+    "category": "Frontend",
+    "shortDescription": "A minimal music player with playlist management and beautiful animations.",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "tags": ["JavaScript", "HTML", "CSS"],
+    "icon": "Music"
+  },
+  {
+    "id": "inkspire-blog",
+    "title": "Inkspire Blog",
+    "category": "Backend",
+    "shortDescription": "A clean and minimal blog platform for writers to share their thoughts.",
+    "image": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "tags": ["Node.js", "Express", "MongoDB"],
+    "icon": "PenTool"
+  },
+  {
+    "id": "weatherly",
+    "title": "Weatherly",
+    "category": "UI/UX",
+    "shortDescription": "A weather app that provides real-time weather updates for any city.",
+    "image": "https://images.unsplash.com/photo-1504608510435-c696f536f014?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "tags": ["React", "OpenWeather API", "CSS"],
+    "icon": "CloudSun"
+  },
+  {
+    "id": "recipehub",
+    "title": "RecipeHub",
+    "category": "Frontend",
+    "shortDescription": "A recipe web app to discover, save and share your favorite recipes.",
+    "image": "https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "tags": ["React", "Spoonacular API", "CSS"],
+    "icon": "ChefHat"
+  }
+]

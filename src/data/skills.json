@@ -1,0 +1,100 @@
+{
+  "header": {
+    "title": "Skills",
+    "subtitle": "A blend of creativity, logic and curiosity — constantly growing, always evolving."
+  },
+  "sections": {
+    "technical": {
+      "title": "What I Work With",
+      "description": "Technologies and tools I use to bring ideas to life and build meaningful experiences.",
+      "categories": [
+        {
+          "id": "frontend",
+          "title": "Frontend",
+          "description": "Building responsive and accessible web interfaces with a focus on user experience.",
+          "icon": "Layout",
+          "skills": [
+            { "name": "React", "icon": "SiReact", "color": "#61DAFB" },
+            { "name": "Next.js", "icon": "SiNextdotjs", "color": "#000000" },
+            { "name": "Tailwind CSS", "icon": "SiTailwindcss", "color": "#06B6D4" },
+            { "name": "JavaScript", "icon": "SiJavascript", "color": "#F7DF1E" },
+            { "name": "TypeScript", "icon": "SiTypescript", "color": "#3178C6" }
+          ]
+        },
+        {
+          "id": "backend",
+          "title": "Backend",
+          "description": "Crafting scalable APIs and handling data with efficiency and clean architecture.",
+          "icon": "Server",
+          "skills": [
+            { "name": "Node.js", "icon": "SiNodedotjs", "color": "#339933" },
+            { "name": "Express.js", "icon": "SiExpress", "color": "#000000" },
+            { "name": "MongoDB", "icon": "SiMongodb", "color": "#47A248" },
+            { "name": "PostgreSQL", "icon": "SiPostgresql", "color": "#4169E1" },
+            { "name": "REST API", "icon": "SiPowerpages", "color": "#FF6C37" }
+          ]
+        },
+        {
+          "id": "design",
+          "title": "Design",
+          "description": "Designing intuitive interfaces and visuals that communicate and inspire.",
+          "icon": "Palette",
+          "skills": [
+            { "name": "Figma", "icon": "SiFigma", "color": "#F24E1E" },
+            { "name": "Adobe XD", "icon": "SiAdobexd", "color": "#FF61F6" },
+            { "name": "Photoshop", "icon": "SiAdobephotoshop", "color": "#31A8FF" },
+            { "name": "Illustrator", "icon": "SiAdobeillustrator", "color": "#FF9A00" },
+            { "name": "Procreate", "icon": "SiProcreate", "color": "#00E0FF" }
+          ]
+        },
+        {
+          "id": "tools",
+          "title": "Tools & Others",
+          "description": "Essential tools and technologies that streamline my workflow and productivity.",
+          "icon": "Briefcase",
+          "skills": [
+            { "name": "Git", "icon": "SiGit", "color": "#F05032" },
+            { "name": "GitHub", "icon": "SiGithub", "color": "#181717" },
+            { "name": "VS Code", "icon": "SiVisualstudiocode", "color": "#007ACC" },
+            { "name": "Docker", "icon": "SiDocker", "color": "#2496ED" },
+            { "name": "Postman", "icon": "SiPostman", "color": "#FF6C37" }
+          ]
+        }
+      ]
+    },
+    "values": {
+      "title": "How I Work",
+      "description": "More than just tools — these values shape the way I build and create.",
+      "items": [
+        {
+          "title": "Curious",
+          "description": "I love exploring new things and turning curiosity into solutions.",
+          "icon": "Lightbulb"
+        },
+        {
+          "title": "Thoughtful",
+          "description": "I design and code with purpose and attention to detail.",
+          "icon": "Cloud"
+        },
+        {
+          "title": "Creative",
+          "description": "I enjoy bringing ideas to life through clean design and logic.",
+          "icon": "Heart"
+        },
+        {
+          "title": "Consistent",
+          "description": "I believe in showing up every day and improving a little at a time.",
+          "icon": "Target"
+        },
+        {
+          "title": "Collaborative",
+          "description": "I love working with others and building meaningful things together.",
+          "icon": "Users"
+        }
+      ]
+    }
+  },
+  "quote": {
+    "text": "Skills may build the product, but mindset builds the journey."
+  }
+}

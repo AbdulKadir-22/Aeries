@@ -4,6 +4,9 @@ import Layout from '../components/shared/Layout';
 import Home from '../pages/Home/Home';
 import Paintings from '../pages/Paintings/Paintings';
 import Shelf from '../pages/Shelf/Shelf';
+import Skills from '../pages/Skills/Skills';
+import Projects from '../pages/Projects/Projects';
+import ProjectDetails from '../pages/Projects/ProjectDetails';
 import Contact from '../pages/Contact/Contact';
 import ComingSoon from '../pages/ComingSoon/ComingSoon'; // Updated path
 
@@ -18,7 +21,11 @@ export const createRouter = (darkMode, setDarkMode) => createBrowserRouter([
       },
       {
         path: "projects",
-        element: <ComingSoon title="Projects" />,
+        element: <Projects />,
+      },
+      {
+        path: "projects/:id",
+        element: <ProjectDetails />,
       },
       {
         path: "paintings",
@@ -26,7 +33,7 @@ export const createRouter = (darkMode, setDarkMode) => createBrowserRouter([
       },
       {
         path: "skills",
-        element: <ComingSoon title="Skills" />,
+        element: <Skills />,
       },
       {
         path: "shelf",
