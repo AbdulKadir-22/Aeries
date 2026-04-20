@@ -15,7 +15,16 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8 text-sm font-medium opacity-90 tracking-wide">
           {content.navLinks.map((link, idx) => (
-            <a key={idx} href={link.href} className="hover:text-brand-accent transition-colors">
+            <a 
+              key={idx} 
+              href={link.href}
+              onClick={(e) => {
+                e.preventDefault();
+                window.history.pushState({}, '', link.href);
+                window.dispatchEvent(new Event('popstate'));
+              }}
+              className="hover:text-brand-accent transition-colors cursor-pointer"
+            >
               {link.label}
             </a>
           ))}
@@ -67,8 +76,13 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               <a 
                 key={idx} 
                 href={link.href} 
-                onClick={() => setMobileMenuOpen(false)}
-                className="text-lg opacity-80 hover:opacity-100 hover:text-brand-accent transition-colors"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.history.pushState({}, '', link.href);
+                  window.dispatchEvent(new Event('popstate'));
+                  setMobileMenuOpen(false);
+                }}
+                className="text-lg opacity-80 hover:opacity-100 hover:text-brand-accent transition-colors cursor-pointer"
               >
                 {link.label}
               </a>

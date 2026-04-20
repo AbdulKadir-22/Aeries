@@ -1,0 +1,78 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Atomic Habits",
+      "author": "James Clear",
+      "genre": "Self-help, Psychology",
+      "pages": 320,
+      "firstPublished": 2018,
+      "rating": 5,
+      "coverColor": "#EAE3D9",
+      "textColor": "#8B7D6B",
+      "coverUrl": "https://m.media-amazon.com/images/I/81bGKUa1e0L._AC_UF1000,1000_QL80_.jpg",
+      "quote": "You do not rise to the level of your goals. You fall to the level of your systems.",
+      "about": "Atomic Habits offers a proven framework for improving—every day. James Clear reveals practical strategies that will teach you exactly how to form good habits, break bad ones, and master the tiny behaviors that lead to remarkable results.",
+      "takeaway": "Focus on your systems and identity, not just the end goals.",
+      "review": "A profoundly practical book on building good habits and breaking bad ones. Small changes make a big difference! Clear breaks down the complex psychology of habit formation into simple, actionable steps that anyone can follow. It fundamentally shifted how I approach personal growth."
+    },
+    {
+      "id": 2,
+      "title": "The Alchemist",
+      "author": "Paulo Coelho",
+      "genre": "Fiction, Adventure",
+      "pages": 163,
+      "firstPublished": 1988,
+      "rating": 5,
+      "coverColor": "#E37C5E",
+      "textColor": "#FDECE7",
+      "coverUrl": "https://m.media-amazon.com/images/I/71aFt4+OTOL.jpg",
+      "quote": "When you want something, all the universe conspires in helping you to achieve it.",
+      "about": "The Alchemist is a philosophical novel that follows the journey of Santiago, a young shepherd who dreams of finding a worldly treasure. His quest takes him across deserts and through life-changing lessons, ultimately leading him to discover the true treasure within.",
+      "takeaway": "Follow your heart. Listen to the whispers of your soul. The universe always has your back.",
+      "review": "The Alchemist is not just a story, it's an experience. Paulo Coelho beautifully weaves dreams, faith and destiny into a simple yet powerful narrative. Santiago's journey reminded me that the path we walk is just as important as the destination we seek.\n\nEvery chapter felt like a gentle nudge from the universe, urging me to listen to my heart and trust the process. The lessons are timeless and universal, making this book one I will return to, again and again.\n\nIf you are at a crossroads, feeling lost or unsure, this book will be the light you didn't know you needed."
+    },
+    {
+      "id": 3,
+      "title": "Deep Work",
+      "author": "Cal Newport",
+      "genre": "Productivity, Business",
+      "pages": 304,
+      "firstPublished": 2016,
+      "rating": 4,
+      "coverColor": "#2F3652",
+      "textColor": "#DFDCE2",
+      "coverUrl": "https://m.media-amazon.com/images/I/81q2ZqwlvLL._AC_UF1000,1000_QL80_.jpg",
+      "quote": "If you don't produce, you won't thrive—no matter how skilled or talented you are.",
+      "about": "Deep work is the ability to focus without distraction on a cognitively demanding task. It's a skill that allows you to quickly master complicated information and produce better results in less time.",
+      "takeaway": "Distraction is the enemy of excellence. Cultivate the ability to focus deeply.",
+      "review": "An essential guide on how to focus without distraction in a cognitively demanding world. Newport makes a compelling case for why deep work is becoming increasingly rare and valuable."
+    }
+  ],
+  "movies": [
+    {
+      "id": 1,
+      "title": "Interstellar",
+      "year": 2014,
+      "rating": 5,
+      "posterUrl": "https://images.unsplash.com/photo-1543722530-d2c3201371e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "review": "A visual and emotional masterpiece. The practical effects combined with Hans Zimmer's score create an unparalleled cinematic experience."
+    },
+    {
+      "id": 2,
+      "title": "The Matrix",
+      "year": 1999,
+      "rating": 5,
+      "posterUrl": "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "review": "Groundbreaking in everything—from philosophical narrative to technical achievements. Defined sci-fi for an entire generation."
+    },
+    {
+      "id": 3,
+      "title": "Inception",
+      "year": 2010,
+      "rating": 5,
+      "posterUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "review": "An intricate puzzle beautifully directed. The layered dream states keep you on the absolute edge of your seat."
+    }
+  ]
+}
