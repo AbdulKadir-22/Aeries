@@ -1,9 +1,12 @@
-import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
 import PetalRain from './PetalRain';
+import Footer from './Footer';
 
 const Layout = ({ darkMode, setDarkMode }) => {
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
+
   return (
     <div className="min-h-screen relative overflow-hidden flex flex-col font-sans transition-colors duration-500">
       <PetalRain />
@@ -20,6 +23,8 @@ const Layout = ({ darkMode, setDarkMode }) => {
       <main className="flex-1 flex flex-col">
         <Outlet />
       </main>
+
+      {!isHomePage && <Footer />}
     </div>
   );
 };

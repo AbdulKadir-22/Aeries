@@ -136,7 +136,7 @@ const PaintingModal = ({ painting, onClose, onNext, onPrev }) => {
           </div>
           
           {/* Right Column: Details Area */}
-          <div className="w-full md:w-[40%] flex flex-col gap-8 bg-white/20 dark:bg-black/10 backdrop-blur-xl p-8 md:p-10 rounded-[2.5rem] glassmorphism border-white/30 dark:border-white/10 shadow-xl">
+          <div className="w-full md:w-[40%] flex flex-col gap-8 bg-white/20 dark:bg-black/10 backdrop-blur-xl p-8 md:p-10 rounded-[2.5rem] glass-heavy border-white/30 dark:border-white/10 shadow-xl">
             {/* Title & Likes */}
             <div className="flex items-start justify-between gap-4">
               <div>

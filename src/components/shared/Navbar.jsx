@@ -9,7 +9,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
 
   return (
     <>
-      <nav className="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] max-w-4xl z-50 glassmorphism rounded-full px-6 py-3 flex items-center justify-between">
+      <nav className="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] max-w-4xl z-50 glass-heavy rounded-full px-6 py-3 flex items-center justify-between">
         <Link to="/" className="w-12 h-12 flex items-center justify-center opacity-90 transition-opacity hover:opacity-100">
           <img src={darkMode ? "/AA_dark.png" : "/AA_light.png"} alt="Logo" className="w-full h-full object-contain drop-shadow-sm rounded-full " />
         </Link>
@@ -63,7 +63,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="md:hidden fixed top-24 right-4 w-64 glassmorphism shadow-2xl rounded-3xl p-6 z-40 transition-colors duration-300">
+        <div className="md:hidden fixed top-24 right-4 w-64 glass-heavy shadow-2xl rounded-3xl p-6 z-40 transition-colors duration-300">
           <div className="flex justify-between items-center mb-6">
             <span className="text-xs uppercase tracking-widest opacity-50 font-semibold">Menu</span>
             <Search size={16} className="opacity-50" />

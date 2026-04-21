@@ -9,8 +9,13 @@ import Projects from '../pages/Projects/Projects';
 import ProjectDetails from '../pages/Projects/ProjectDetails';
 import Contact from '../pages/Contact/Contact';
 import ComingSoon from '../pages/ComingSoon/ComingSoon'; // Updated path
+import AdminPanel from '../pages/Admin/AdminPanel';
 
 export const createRouter = (darkMode, setDarkMode) => createBrowserRouter([
+  {
+    path: "/alfisha/admin/:password",
+    element: <AdminPanel />,
+  },
   {
     path: "/",
     element: <Layout darkMode={darkMode} setDarkMode={setDarkMode} />,

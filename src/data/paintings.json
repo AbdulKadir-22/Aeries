@@ -35,22 +35,5 @@
     "dimensions": "25  35 cm",
     "year": "2026",
     "thoughts": "Captured the delicate texture of petals in early morning light. Each stroke represents the growth and bloom of a soulful journey."
-  },
-  {
-    "id": 3,
-    "title": "Rainy Strolls",
-    "category": "Acrylic",
-    "subcategory": "Cityscape",
-    "likes": 87,
-    "image": "https://images.unsplash.com/photo-1518002167667-27b00ec59a72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    "thumbnails": [
-      "https://images.unsplash.com/photo-1518002167667-27b00ec59a72?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      "https://images.unsplash.com/photo-1519692938311-591761809278?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-    ],
-    "description": "A vibrant street scene bathed in neon reflections on a wet evening.",
-    "medium": "Acrylic on Canvas",
-    "dimensions": "40 x 50 cm",
-    "year": "2024",
-    "thoughts": "The challenge was capturing the light diffusion on wet pavement. It reflects the beauty found in chaotic, rainy city nights."
   }
 ]
