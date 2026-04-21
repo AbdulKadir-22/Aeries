@@ -10,6 +10,7 @@ import ProjectDetails from '../pages/Projects/ProjectDetails';
 import Contact from '../pages/Contact/Contact';
 import ComingSoon from '../pages/ComingSoon/ComingSoon'; // Updated path
 import AdminPanel from '../pages/Admin/AdminPanel';
+import ErrorPage from '../pages/Error/ErrorPage';
 
 export const createRouter = (darkMode, setDarkMode) => createBrowserRouter([
   {
@@ -50,4 +51,8 @@ export const createRouter = (darkMode, setDarkMode) => createBrowserRouter([
       },
     ],
   },
+  {
+    path: "*",
+    element: <ErrorPage />
+  }
 ]);
