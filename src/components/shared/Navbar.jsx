@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Sun, Moon, Menu, X, Search } from 'lucide-react';
+import { Sun, Moon, Menu, X, Search, Volume2, VolumeX } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import content from '../../data/content.json';
 
-const Navbar = ({ darkMode, setDarkMode }) => {
+const Navbar = ({ darkMode, setDarkMode, isMusicPlaying, setIsMusicPlaying }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
 
@@ -28,6 +28,16 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         </div>
 
         <div className="flex items-center gap-4">
+          {/* Sound Toggle */}
+          <button
+            onClick={() => setIsMusicPlaying(!isMusicPlaying)}
+            className="p-2 opacity-80 hover:text-brand-accent transition-colors cursor-pointer"
+            aria-label="Toggle Music"
+          >
+            {isMusicPlaying ? <Volume2 size={20} /> : <VolumeX size={20} />}
+          </button>
+
+          {/* Theme Toggle */}
           <button 
             onClick={() => setDarkMode(!darkMode)}
             className="flex items-center p-1 w-16 h-8 rounded-full glassmorphism relative overflow-hidden cursor-pointer hover:border-brand-accent transition-colors hidden md:flex"
@@ -60,6 +70,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           </div>
         </div>
       </nav>
+
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (

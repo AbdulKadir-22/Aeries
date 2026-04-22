@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from './Navbar';
 import PetalRain from './PetalRain';
 import Footer from './Footer';
+import BackgroundMusic from './BackgroundMusic';
 
 const Layout = ({ darkMode, setDarkMode }) => {
+  const [isMusicPlaying, setIsMusicPlaying] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === '/';
 
@@ -33,6 +35,7 @@ const Layout = ({ darkMode, setDarkMode }) => {
   return (
     <div className="min-h-screen relative overflow-hidden flex flex-col font-sans transition-colors duration-500">
       <PetalRain />
+      <BackgroundMusic isPlaying={isMusicPlaying} />
       
       {/* Global Theme Decorations */}
       <img src="/corner_tulips.png" alt="tulip decoration" className="corner-flower left hidden md:block" />
@@ -40,7 +43,12 @@ const Layout = ({ darkMode, setDarkMode }) => {
       <img src="/corner_tulips.png" alt="tulip decoration" className="corner-flower left mobile-tulip md:hidden" />
 
       {/* Navbar stays consistent */}
-      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+      <Navbar 
+        darkMode={darkMode} 
+        setDarkMode={setDarkMode} 
+        isMusicPlaying={isMusicPlaying}
+        setIsMusicPlaying={setIsMusicPlaying}
+      />
 
       {/* Page Content injected here with Global Organic Bloom */}
       <main className="flex-1 flex flex-col relative">
@@ -71,3 +79,4 @@ const Layout = ({ darkMode, setDarkMode }) => {
 };
 
 export default Layout;
+
